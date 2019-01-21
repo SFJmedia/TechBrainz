@@ -7,12 +7,6 @@ and open the template in the editor.
     Created on : 15 Jan, 2019, 23:26:33 PM
     Author     : Developer | UI/UX Developer
 */
-/*@font-face {
-    font-family: "Times New Roman", Times, serif;
-    src: url('assets/font/times-new-roman.otf') format("opentype");
-}*/
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
-@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
 
 body {
@@ -21,9 +15,6 @@ body {
     font-size: 14px;
     line-height: 24px;    
     color: #666;
-    /*font-family: "Times New Roman", Times, serif;*/
-    /*font-family: 'Roboto', sans-serif;*/
-    /*font-family: 'Raleway', sans-serif;*/
     font-family: 'Lato', sans-serif;
 }
 
@@ -487,7 +478,9 @@ a:hover {
 .foot_container {
     float: left;
     width: 100%;
-    padding: 3% 0;
+    padding: 2% 0;
+    color: #fff;
+    background-color: #232637;
 }
 .foot_head{
     float: left;
@@ -523,7 +516,7 @@ a:hover {
     width: 100%;
     text-decoration: none;
     padding: 1% 0;
-    color: #666;
+    color: #fff;
 }
 .soci_media {
     float: left;
@@ -660,3 +653,218 @@ a:hover {
 
 @media(min-width:1201px) and (max-width:1650px) {}
 /* Media Query View Port Starts */
+
+/* About us css start */
+
+.about_sec_container {
+    float: left;
+    width: 100%;
+    padding: 5% 0;
+}
+.abt_lef_sec {
+    float: left;
+    width: 100%;
+    position: relative;
+    text-align: justify;
+}
+.abt_lef_sec span {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 15px 0;
+    float: left;
+    width: 100%;
+}
+.abt_lef_sec span:after {
+    content: "";
+    position: absolute;
+    border-bottom: 3px solid #fe9100;
+    width: 100px;
+    height: 45px;
+    left: 0;
+}
+.miss_viiss_container {
+    float: left;
+    width: 100%;
+    padding: 2% 0 7%;
+    background-image: url('../images/about_background.png');
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.miss_viiss_container .col-sm-4 {
+    color: #fff;
+    min-height: 280px;
+}
+.mi_vi_head {
+    text-align: center;
+    float: left;
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    padding: 2% 0;
+}
+.mi_vi_head img{
+    margin: auto;
+    padding: 10px 0;
+    width: 25%;
+}
+.mi_vi_head span{
+    float: left;
+    width: 100%;
+    font-size: 36px;
+    line-height: 36px;    
+}
+.thr_mis_vis {
+    float: left;
+    width: 100%;
+    text-align: center;
+    background-color: #0274b5;
+    padding: 15px;
+}
+.thr_mis_vis:hover {
+    background-color: #ff9000;
+}
+.thr_mis_vis span {
+    font-size: 30px;
+    line-height: 30px;
+    color: #fff;
+    padding: 20px;
+    float: left;
+}
+.thr_mis_vis img {
+    width: 20%;
+    float: left;
+}
+.thrr_conten {
+    float: left;
+    width: 100%;
+    background-color: #000;
+    min-height: 240px;
+    padding: 5%;
+    text-align: justify;
+}
+.mid_dox{
+    background-color: #ff9000;
+}
+.what_we_do_abt_cont {
+    float: left;
+    width: 100%;
+    background-image: url('../images/what_we_do_back.png');
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.abt_ehat_wehd {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 3%;
+}
+.abt_ehat_wehd img{
+    margin: auto;
+    padding: 10px 0;
+    width: 25%;
+}
+.abt_ehat_wehd b {
+    float: left;
+    width: 100%;
+    font-size: 36px;
+    line-height: 36px;
+}
+.left_wat_do {
+    text-align: right;
+    float: left;
+    width: 100%;
+}
+.left_wat_do span{
+    float: left;
+    width: 100%;
+    padding: 20px 0;
+    font-size: 21px;
+}
+.left_wat_do span:after {
+    content: "";
+    position: absolute;
+    border-bottom: 3px solid #fe9100;
+    width: 75px;
+    height: 33px;
+    right: 15px;
+}
+.right_wat_do {
+    text-align: left;
+    float: left;
+    width: 100%;
+}
+.right_wat_do span{
+    float: left;
+    width: 100%;
+    padding: 20px 0;
+    font-size: 21px;
+}
+.right_wat_do span:after {
+    content: "";
+    position: absolute;
+    border-bottom: 3px solid #fe9100;
+    width: 75px;
+    height: 33px;
+    left: 15px;
+}
+.mid_image {
+    float: left;
+    width: 100%;
+}
+.mid_image img{
+    margin: auto;
+}
+.count_down_container {
+    float: left;
+    width: 100%;
+    background-color: #0274b5;
+    text-align: center;
+    padding: 3% 0;
+}
+.abt_ico_cont {
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    line-height: 24px;
+}
+.abt_ico_cont img {
+    margin: auto;
+    padding-bottom: 10%;
+}
+.cou_text {
+    float: left;
+    width: 100%;
+    padding: 5px 0;
+}
+.mobi_container {
+    float: left;
+    width: 100%;
+}
+.caro_sect {
+    float: left;
+    width: 100%;
+}
+.caro_sect .carousel-indicators li{
+    margin: 5px 0;
+    background-color: #7f7f7f !important;
+    border: 0px solid #fff !important;
+}
+.caro_sect .carousel-indicators .active{
+    background-color: #d6a902 !important;
+    width: 10px !important;
+    height: 10px !important;
+}
+.caro_sect ol.carousel-indicators li {
+    display: block;
+}
+.caro_sect .carousel-indicators {
+    left: auto !important;
+    width: auto !important;
+    margin-left: auto !important;
+    right: 0 !important;
+    float: right !important;
+    top: calc(100% - 50%) !important;
+}
+/* About us css end */
