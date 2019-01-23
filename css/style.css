@@ -873,3 +873,100 @@ a:hover {
     top: calc(100% - 50%) !important;
 }
 /* About us css end */
+/* Course css start */
+.course_banner_container {
+    float: left;
+    width: 100%;
+    margin-top: 5%;
+    position: relative;
+}
+.cont_on_ban {
+    float: left;
+    width: 100%;
+    position: absolute;
+    top: calc(100% - 80%);
+}
+.lef_on_bsn, .rit_on_bsn {
+    float: left;
+    width: 100%;
+    background-color: rgba(0,0,0,.6);
+    color: #fff;
+    padding: 3%;
+    min-height: 295px;
+}
+.lef_on_bsn span {
+    color: #fe9100;
+    font-size: 24px;
+    line-height: 24px;
+    float: left;
+    width: 100%;
+    padding: 2% 0;
+}
+.link_on_ban {
+    float: left;
+    width: 100%;
+    padding: 5% 0;
+}
+.link_on_ban a{
+    background-color: #ff9000;
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 12px 15px;
+    margin: 0 8%;
+    transition: 1s all ease-in-out;
+}
+.link_on_ban a:hover{
+    color: #fff;
+    background-color: #0274b5;
+    border-radius: 0;
+    transition: 1s all ease-in-out;
+}
+.schedule_containe {
+    float: left;
+    width: 100%;
+    padding: 2% 0;
+}
+.sch_hd {
+    float: left;
+    width: 100%;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.sche_tabs {
+    float: left;
+    width: 100%;
+}
+.sche_tabs ul li {
+    float: left;
+    width: 100%;
+}
+.sche_tabs ul li a{
+    color: #fff;
+    padding: 15px;
+    background-color: #0273b5;
+    margin: 1px 0;
+}
+.sche_tabs ul li a:hover {
+    background-color: #ff9000;
+}
+.sche_tabs ul li.active a{
+    background-color: #ff9000 !important;
+    border-left: 5px solid #000;
+}
+.sche_tabs ul li.active::after {
+    content: "\f0da";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: inherit;
+    color: #ff9000;
+    font-size: 18px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 18px;
+    right: -20px;
+}
+/* Course css end */

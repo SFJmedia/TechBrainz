@@ -145,7 +145,7 @@ $(document).ready(function () {
 //        gads.async = true;
 //        var useSSL = 'https:' === document.location.protocol;
 //        gads.src = (useSSL ? 'https:' : 'http:') +
-//                '//rtbpassback.andbeyond.media/prebid1.31.0.3.js';
+//                'URL Comes Here';
 //        var node = document.getElementsByTagName('script')[0];
 //        node.parentNode.insertBefore(gads, node);
 //    })();
