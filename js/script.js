@@ -101,7 +101,7 @@ $(document).ready(function () {
         $('#back-to-top').tooltip('show');
     });
 // Scroll to top end
-// count set value start
+// Count set value start
     $(function () {
         function isScrolledIntoView($elem) {
             var docViewTop = $(window).scrollTop();
@@ -110,7 +110,6 @@ $(document).ready(function () {
             var elemBottom = elemTop + $elem.height();
             return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
         }
-
         function count($this) {
             var current = parseInt($this.html(), 10);
             if (isScrolledIntoView($this) && !$this.data("isCounting") && current < $this.data('count')) {
@@ -122,13 +121,11 @@ $(document).ready(function () {
                 }, 50);
             }
         }
-
         $(".c-section4").each(function () {
             $(this).data('count', parseInt($(this).html(), 10));
             $(this).html('0');
             $(this).data("isCounting", false);
         });
-
         function startCount() {
             $(".c-section4").each(function () {
                 count($(this));
@@ -140,6 +137,17 @@ $(document).ready(function () {
         });
         startCount();
     });
-
-// count set value end
+// Count set value end
+// Bind script tag in head tag start
+//    (function () {
+//        var gads = document.createElement('script');
+//        gads.type = 'text/javascript';
+//        gads.async = true;
+//        var useSSL = 'https:' === document.location.protocol;
+//        gads.src = (useSSL ? 'https:' : 'http:') +
+//                '//rtbpassback.andbeyond.media/prebid1.31.0.3.js';
+//        var node = document.getElementsByTagName('script')[0];
+//        node.parentNode.insertBefore(gads, node);
+//    })();
+// Bind script tag in head tag end
 });
