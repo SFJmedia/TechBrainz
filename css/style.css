@@ -48,7 +48,9 @@ a:hover {
 .nopad {
     padding: 0 !important;
 }
-
+.lef_nopad {
+    padding-left: 0 !important;
+}
 .nomar {
     margin: 0 !important;
 }
@@ -528,7 +530,7 @@ a:hover {
 }
 .soci_media img {
     float: left;
-    width: 5%;
+    width: 10%;
     margin-right: 5px;
     transition: 1s all;
     border-radius: 50%;
@@ -569,6 +571,33 @@ a:hover {
 .broucher i {
     padding: 11px;
     background-color: #fe9100;
+}
+.quick_lks {
+    float: left;
+    width: 100%;
+    padding: 5% 0;
+}
+.quick_lks b {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #0273b5;
+}
+.quick_lks ul {
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+}
+.quick_lks ul li {
+    padding: 5px 0;
+    list-style-type: none;
+}
+.quick_lks ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.quick_lks ul li a:hover {
+    color: #ff9000;
+    letter-spacing: 1px;
 }
 .copy_cont {
     float: left;
@@ -930,10 +959,11 @@ a:hover {
 .sch_hd {
     float: left;
     width: 100%;
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 36px;
+    line-height: 36px;
     text-align: center;
     font-weight: bold;
+    padding-bottom: 2%;
 }
 .sche_tabs {
     float: left;
@@ -944,8 +974,9 @@ a:hover {
     width: 100%;
 }
 .sche_tabs ul li a{
+    font-size: 21px;
     color: #fff;
-    padding: 15px;
+    padding: 24px 15px;
     background-color: #0273b5;
     margin: 1px 0;
 }
@@ -957,16 +988,490 @@ a:hover {
     border-left: 5px solid #000;
 }
 .sche_tabs ul li.active::after {
-    content: "\f0da";
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: bold;
-    text-decoration: inherit;
-    color: #ff9000;
-    font-size: 18px;
+    content: "";
+    background-image: url(../images/tab_pill_active.png);
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
     padding-right: 0.5em;
     position: absolute;
     top: 18px;
-    right: -20px;
+    right: -45px;
+    z-index: -1;
 }
+.schedule_containe .tab-content {
+    float: left;
+    width: 100%;
+    background-color: #ddd;
+    padding: 4%;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+.tra_anch {
+    float: left;
+    width: 100%;
+    margin-left: 15px;
+}
+.tra_anch ul li a {
+    border-radius: 20px;
+    padding: 7px 21px;
+    box-shadow: 0 1px 10px 1px #fff;
+    background-color: #ff9000;
+    color: #fff;
+    margin: 0 18px;
+}
+.tra_anch ul li a:hover{
+    background-color: #ff9000;
+}
+.tra_anch ul li a:focus{
+    background-color: #e71734;
+}
+.tra_anch ul li.active a {
+    background-color: #e71734;
+}
+.brie_anch_track .tab-content {
+    float: left;
+    width: 100%;
+    background-color: #0273b5 !important;
+    padding: 3%;
+    margin: 2%;
+}
+
+.brie_anch_track {
+    float: left;
+    width: 100%;
+}
+.brie_anch_track b{
+    float: left;
+    width: 100%;
+    font-size: 21px;
+    text-align: center;
+    margin: 0 0 3%;
+    color: #fff;
+}
+.cont_brie {
+    float: left;
+    width: 100%;
+    min-height: 110px;
+}
+
+.date_on {
+    float: left;
+    width: 100%;
+    background-color: #e71734;
+    color: #fff;
+    padding: 20px 15px;
+    text-align: center;
+}
+.date_on span {
+    float: left;
+    width: 100%;    
+}
+.day_on {
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    padding: 8px;
+    text-align: center;
+}
+.day_on span {
+    float: left;
+    width: 100%;
+}
+.day_on a {
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #fe9100;
+    padding: 3px 10px;
+}
+.day_on a:hover {
+    background-color: #0273b5;
+}
+.tab-content .tab-pane{
+    transform: scale(0);
+    transition: 3s;
+}
+.tab-content .tab-pane.active {
+    transform: scale(1);
+    transition: 3s;
+}
+.tab_hd_insec{
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: #0274b5;
+    font-size: 24px;
+    line-height: 24px;
+}
+.sche_form {
+    float: left;
+    width: 100%;
+    background-color: #ddd;
+    padding: 5%;
+}
+.sche_form b {
+    float: left;
+    width: 100%;
+    font-size: 21px;
+    color: #054e78;
+}
+.sche_form label {
+    margin-bottom: 0;
+}
+.sche_form input {
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 20px;
+    margin: 2% 0;
+}
+.submit input {
+    float: left;
+    width: 100%;
+    margin-top: 10%;
+    color: #fff;
+    background-color: #e71734;
+}
+.cou_ke_fea_contain {
+    float: left;
+    width: 100%;
+}
+.cour_he {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 2%;
+}
+.key_course_details {
+    float: left;
+    width: 100%;
+    position: absolute;
+    left: -15px;
+    background-color: #000;
+    min-height: 547px;
+    padding: 5% 0;
+}
+.key_course_details a {
+    float: left;
+    width: 100%;
+    font-size: 18px;
+    padding: 2% 0;
+    color: #fff;
+    border-bottom: 1px solid #564f4f;
+    text-decoration: none;
+}
+.key_course_details a:hover {
+    color: #e71734;
+}
+.key_course_details i {
+    margin-right: 5%;
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 50%;
+    margin-left: -4%;
+}
+.key_course_details a:hover i {
+    background-color: #e71734;
+    border: 2px solid #fff;
+    color: #fff;
+}
+.cour_curri_containe {
+    float: left;
+    width: 100%;
+    padding: 2% 0;
+}
+.cour_curri_containe .panel-group .panel {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #eee;
+}
+
+.cour_curri_containe .panel-default > .panel-heading {
+    padding: 0;
+    border-radius: 0;
+    color: #fff;
+    background-color: #0273b5;
+    border-color: #eee;
+}
+
+.cour_curri_containe .panel-title {
+    font-size: 14px;
+}
+
+.cour_curri_containe .panel-title > a {
+    display: block;
+    padding: 15px;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.cour_curri_containe .more-less {
+    float: right;
+    color: #212121;
+}
+
+.cour_curri_containe .panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #EEEEEE;
+}
+.cour_curri_containe .demo {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.curri_heads {
+    float: left;
+    width: 100%;
+    font-size: 36px;
+    line-height: 36px;
+    padding-bottom: 2%;
+}
+.course_accoudian_on {
+    float: left;
+    width: 100%;
+}
+.course_accoudian_on div#accordion span {
+    float: right;
+    background-color: #fe9100;
+    color: #fff;
+    padding: 15px;
+}
+.course_accoudian_on .glyphicon{
+    top: -15px;
+    right: -15px;
+    font-weight: bold;
+}
+.new_lett_container {
+    float: left;
+    width: 100%;
+    background-image: url("../images/newsletterback.png");
+    background-repeat: no-repeat;
+}
+.news_left_se {
+    float: left;
+    width: 100%;
+    color: #fff;
+    font-size: 36px;
+    line-height: 36px;
+    padding-top: 10%;
+}
+.news_left_se span {
+    font-size: 30px;
+    line-height: 30px;
+}
+.news_left_se img {
+    float: left;
+    padding-right: 20px;
+    padding-top: 12px;
+}
+.newa_riht_se {
+    float: left;
+    width: 100%;
+    padding: 10%;
+    padding-left: 30%;
+}
+.newa_riht_se .newsletter {
+    padding: 80px 0;
+    background: #19beda;
+}
+.newa_riht_se .newsletter .content {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2; }
+.newa_riht_se .newsletter .content h2 {
+    color: #243c4f;
+    margin-bottom: 40px; }
+.newa_riht_se .newsletter .content .form-control {
+    height: 50px;
+    border-color: #ffffff;
+    border-radius:0;
+}
+.newa_riht_se .newsletter .content.form-control:focus {
+    box-shadow: none;
+    border: 2px solid #243c4f;
+}
+.newa_riht_se .newsletter .content .btn {
+    min-height: 50px; 
+    border-radius:0;
+    background: #243c4f;
+    color: #fff;
+    font-weight:600;
+}
+.newa_riht_se button {
+    background-color: #f2003f;
+    color: #fff;
+}
+.related_course_container {
+    float: left;
+    width: 100%;
+}
+.head_related {
+    float: left;
+    width: 100%;
+    background-color: #000;
+    padding: 1%;
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 3%;
+}
+.owl-theme .owl-controls .owl-page span {
+    width: 10px !important;
+    height: 10px !important;
+    margin: 20px 10px !important;
+    border-radius: 0 !important;
+    background: #113e9b !important;
+}
+.slide_course {
+    float: left;
+    width: 100%;
+    cursor: pointer;
+}
+.slide_course img {
+    margin: auto;
+}
+.item{
+    float: left !important;
+}
+.slid_cont {
+    float: left;
+    width: 100%;
+    color: #000;
+    padding: 2%;
+    min-height: 120px;
+    font-size: 18px;
+    background-color: #ff9000;
+    text-align: center;
+    text-transform: uppercase;
+}
+.slid_cont b{
+    float: left;
+    width: 100%;
+    margin: 5% 0;
+}
+.slid_cont a {
+    padding: 7px 21px;
+    background-color: #f2003e;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+}
+.slid_cont a:hover {
+    background-color: #01559b;
+}
+.slid_cont:after {
+    content: '';
+    position: absolute;
+    background-image: url(../images/tri_angle.png);
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    bottom: -15px;
+    right: 12px;
+}
+.testimonial_review_container {
+    float: left;
+    width: 100%;
+}
+.revie_head {
+    float: left;
+    width: 100%;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 3%;
+}
+.testimonial_review_container .testimonial {
+    margin: 0 20px 50px;
+}
+
+.testimonial_review_container .testimonial .pic {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 15px 15px 0;
+}
+
+.testimonial_review_container .testimonial .pic img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.testimonial_review_container .testimonial .testimonial-profile {
+    display: inline-block;
+    position: relative;
+    top: -45px
+}
+
+.testimonial_review_container .testimonial .title {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2f2f2f;
+    text-transform: capitalize;
+    margin: 0 0 7px 0;
+}
+
+.testimonial_review_container .testimonial .post {
+    display: block;
+    font-size: 14px;
+    color: #5d7aa7;
+}
+
+.testimonial_review_container .testimonial .description {
+    padding: 20px 22px;
+    background: #1f487e;
+    font-size: 15px;
+    color: #fff;
+    line-height: 25px;
+    margin: 0;
+    position: relative;
+}
+
+.testimonial_review_container .testimonial .description:before,
+.testimonial_review_container .testimonial .description:after {
+    content: "";
+    border-width: 18px 0 0 18px;
+    border-style: solid;
+    border-color: #5d7aa7 transparent transparent;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+}
+
+.testimonial_review_container .testimonial .description:after {
+    border-width: 18px 18px 0 0;
+    left: auto;
+    right: 0;
+}
+
+.testimonial_review_container .owl-theme .owl-controls {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.testimonial_review_container .owl-theme .owl-controls .owl-buttons div {
+    opacity: 0.8;
+    background: #fff;
+}
+
+.testimonial_review_container .owl-prev:before,
+.testimonial_review_container .owl-next:before {
+    content: "<";
+    font-weight: 900;
+    font-size: 20px;
+    color: #1f487e;
+}
+
+.testimonial_review_container .owl-next:before {
+    content: ">";
+}
+
 /* Course css end */

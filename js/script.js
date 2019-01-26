@@ -150,4 +150,58 @@ $(document).ready(function () {
 //        node.parentNode.insertBefore(gads, node);
 //    })();
 // Bind script tag in head tag end
+// Faq start
+    $(document).ready(function () {
+        $('.panel-collapse').on('show.bs.collapse', function () {
+            $(this).siblings('.panel-heading').addClass('active');
+        });
+
+        $('.panel-collapse').on('hide.bs.collapse', function () {
+            $(this).siblings('.panel-heading').removeClass('active');
+        });
+    });
+
+    $(document).ready(function () {
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.in").each(function () {
+            $(this).siblings(".panel-heading").find(".glyphicon").addClass("glyphicon-minus").removeClass("glyphicon-plus");
+        });
+
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function () {
+            $(this).parent().find(".glyphicon").removeClass("glyphicon-plus").addClass("glyphicon-minus");
+        }).on('hide.bs.collapse', function () {
+            $(this).parent().find(".glyphicon").removeClass("glyphicon-minus").addClass("glyphicon-plus");
+        });
+    });
+
+// Faq end
+// Owl start
+    jQuery(".related_course_container .owl-demo").owlCarousel({
+        autoPlay: 3000, //Set AutoPlay to 3 seconds
+        responsive: true,
+        addClassActive: true,
+        items: 4,
+        itemsDesktop: [1199, 4],
+        itemsDesktopSmall: [979, 4],
+        itemsTablet: [768, 2],
+        itemsMobile: [640, 2],
+        itemsMobileSmall: [320, 1],
+        stopOnHover: true
+    });
+// Owl end
+// Owl testimonial start 
+    $(document).ready(function () {
+        $("#testimonial-slider").owlCarousel({
+            items: 2,
+            itemsDesktop: [1000, 2],
+            itemsDesktopSmall: [979, 2],
+            itemsTablet: [768, 1],
+            pagination: false,
+            navigation: true,
+            navigationText: ["", ""],
+            autoPlay: true
+        });
+    });
+// Owl restimonial end
 });
