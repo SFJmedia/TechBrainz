@@ -189,6 +189,18 @@ $(document).ready(function () {
         itemsMobileSmall: [320, 1],
         stopOnHover: true
     });
+    jQuery(".popular_container .owl-demo").owlCarousel({
+        autoPlay: 3000, //Set AutoPlay to 3 seconds
+        responsive: true,
+        addClassActive: true,
+        items: 4,
+        itemsDesktop: [1199, 4],
+        itemsDesktopSmall: [979, 4],
+        itemsTablet: [768, 2],
+        itemsMobile: [640, 2],
+        itemsMobileSmall: [320, 1],
+        stopOnHover: true
+    });
 // Owl end
 // Owl testimonial start 
     $(document).ready(function () {
@@ -204,4 +216,10 @@ $(document).ready(function () {
         });
     });
 // Owl restimonial end
+// Animate site start
+    $(document).ready(function () {
+        new WOW().init();
+        jQuery.noConflict();
+    });
+// Animate site end
 });

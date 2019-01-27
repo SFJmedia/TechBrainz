@@ -1475,3 +1475,239 @@ a:hover {
 }
 
 /* Course css end */
+/* Service css start */
+.course_search_banner_container{
+    float: left;
+    width: 100%;
+    position: relative;
+    margin-top: 5%;
+}
+.cour_banner_content {
+    float: left;
+    width: 100%;
+    position: absolute;
+    top: calc(100% - 65%);
+}
+.find_cour {
+    float: left;
+    width: 100%;
+}
+.find_cour b {
+    color: #fff;
+    font-size: 21px;
+    float: left;
+    width: 100%;
+}
+.find_cour .input-group {
+    float: left;
+    width: 100%;
+    padding: 2% 0;
+}
+.find_cour input {
+    background-color: transparent;
+    color: #fff;
+}
+.find_cour button {
+    background-color: #0274b5 !important;
+    color: #fff;
+}
+.quick_search {
+    float: left;
+    width: 100%;
+}
+.qui_img {
+    float: left;
+    width: 100%;
+}
+.qui_img img {
+    margin: auto;
+    width: 80%;
+}
+.qui_img a {
+    text-align: center;
+    float: left;
+    width: 100%;
+    color: #fff;
+    font-size: 17px;
+    padding: 5% 0;
+}
+.qui_img:hover a {
+    color: #fe9100;
+    text-decoration: none;
+}
+.reques_contianer {
+    float: left;
+    width: 100%;
+    margin: 5% 0;
+}
+.req_div_left {
+    float: left;
+    width: 100%;
+    background-color: #0273b5;
+    color: #fff;
+    padding: 5%;
+    text-align: right;
+    font-size: 18px;
+    border-radius: 5px;
+    border-right: 2px solid #fff;
+    cursor: pointer;
+}
+.req_div_left b{
+    font-size: 30px;
+    line-height: 30px;
+}
+.req_div_left img {
+    float: right;
+    display: inline-flex;
+    padding-left: 5%;
+}
+.req_div_left p {
+    padding: 5% 0;
+}
+.req_div_right {
+    float: left;
+    width: 100%;
+    background-color: #0273b5;
+    color: #fff;
+    padding: 5%;
+    text-align: left;
+    font-size: 18px;
+    border-radius: 5px;
+    border-left: 2px solid #fff;
+    cursor: pointer;
+}
+.req_div_right b{
+    font-size: 30px;
+    line-height: 30px;
+}
+.req_div_right img {
+    float: left;
+    display: inline-flex;
+    padding-right: 5%;
+}
+.req_div_right p {
+    padding: 5% 0;
+}
+.req_div_left:after {
+    content: '';
+    position: absolute;
+    background-image: url(../images/req_icon_lft_btm.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    right: -87.6%;
+    top: 98%;
+}
+.req_div_right:after {
+    content: '';
+    position: absolute;
+    background-image: url(../images/req_icon_rit_btm.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    right: -2px;
+    top: 98%;
+}
+.backgroundimg {
+    animation: bgmove 15s linear infinite;
+    -webkit-animation: bgmove 15s linear infinite;
+    -moz-animation: bgmove 15s linear infinite;
+    background-image: url("../images/floating_background.png");
+    float: left;
+    height: 100%;
+    width: 100%;
+    padding: 4%;
+    background-repeat: repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+@keyframes bgmove {
+    0% {
+        background-position: -200px center;
+    }
+    50% {
+        background-position: 400px center;
+    }
+    100% {
+        background-position: 850px center;
+    }
+}
+
+@-webkit-keyframes bgmove {
+    0% {
+        background-position: -200px center;
+    }
+    50% {
+        background-position: 400px center;
+    }
+    100% {
+        background-position: 850px center;
+    }
+}
+.popular_container{
+    float: left;
+    width: 100%;
+    padding: 3% 0 0;
+    background-image: url('../images/services_background_dark.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.popu_head {
+    float: left;
+    width: 100%;
+    font-size: 36px;
+    line-height: 36px;
+    color: #fff;
+    text-align: center;
+    padding: 0 0 3%;
+}
+.popu_head img {
+    margin: auto;
+    padding: 1% 0;
+}
+.train_metho_container{
+    float: left;
+    width: 100%;
+    padding-top: 2%;
+}
+.train_metholady {
+    float: left;
+    width: 100%;
+}
+.train_metholady img {
+    margin: auto;
+    width: 70%;
+}
+.taining_meth {
+    float: left;
+    width: 100%;
+    padding: 10%;
+}
+.taining_meth b {
+    float: left;
+    width: 100%;
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 5%;
+}
+.train_tre_sec {
+    float: left;
+    width: 100%;
+    min-height: 101px;
+    text-align: justify;
+}
+.train_tre_sec img {
+    float: left;
+    background-color: #f2003e;
+    padding: 10px;
+    margin-right: 2%;
+}
+.train_tre_sec:hover img{
+    background-color: #01559b;
+}
+.train_tre_sec span {
+    font-size: 20px;
+    color: #0273b5;
+}
+/* Service css end */
