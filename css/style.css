@@ -1181,7 +1181,7 @@ a:hover {
 .cour_curri_containe {
     float: left;
     width: 100%;
-    padding: 2% 0;
+    /*padding: 2% 0;*/
 }
 .cour_curri_containe .panel-group .panel {
     border-radius: 0;
@@ -1336,6 +1336,7 @@ a:hover {
 }
 .item{
     float: left !important;
+    margin: 0 5px;
 }
 .slid_cont {
     float: left;
@@ -1372,11 +1373,12 @@ a:hover {
     width: 50px;
     height: 50px;
     bottom: -15px;
-    right: 12px;
+    right: -6px;
 }
 .testimonial_review_container {
     float: left;
     width: 100%;
+    padding: 2% 0;
 }
 .revie_head {
     float: left;
@@ -1538,14 +1540,14 @@ a:hover {
 .reques_contianer {
     float: left;
     width: 100%;
-    margin: 5% 0;
+    margin-bottom: 5%;
 }
 .req_div_left {
     float: left;
     width: 100%;
     background-color: #0273b5;
     color: #fff;
-    padding: 5%;
+    padding: 2%;
     text-align: right;
     font-size: 18px;
     border-radius: 5px;
@@ -1569,7 +1571,7 @@ a:hover {
     width: 100%;
     background-color: #0273b5;
     color: #fff;
-    padding: 5%;
+    padding: 2%;
     text-align: left;
     font-size: 18px;
     border-radius: 5px;
@@ -1595,7 +1597,7 @@ a:hover {
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    right: -87.6%;
+    right: -85.2%;
     top: 98%;
 }
 .req_div_right:after {
@@ -1647,18 +1649,18 @@ a:hover {
 .popular_container{
     float: left;
     width: 100%;
-    padding: 3% 0 0;
-    background-image: url('../images/services_background_dark.jpg');
+    padding: 1% 0;
+/*    background-image: url('../images/services_background_dark.jpg');
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 100%;*/
 }
 .popu_head {
     float: left;
     width: 100%;
     font-size: 36px;
     line-height: 36px;
-    color: #fff;
+    /*color: #fff;*/
     text-align: center;
     padding: 0 0 3%;
 }
@@ -1677,12 +1679,12 @@ a:hover {
 }
 .train_metholady img {
     margin: auto;
-    width: 70%;
+    width: 60%;
 }
 .taining_meth {
     float: left;
     width: 100%;
-    padding: 10%;
+    padding: 5%;
 }
 .taining_meth b {
     float: left;
@@ -1715,7 +1717,7 @@ a:hover {
 .event_sched_cotn {
     float: left;
     width: 100%;
-    padding: 3% 0;
+    padding: 1% 0;
 }
 .event_sced_hd {
     float: left;
