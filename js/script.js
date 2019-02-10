@@ -209,6 +209,8 @@ $(document).ready(function () {
             itemsDesktop: [1000, 2],
             itemsDesktopSmall: [979, 2],
             itemsTablet: [768, 1],
+            itemsMobile: [640, 2],
+            itemsMobileSmall: [320, 1],
             pagination: false,
             navigation: true,
             navigationText: ["", ""],
@@ -216,6 +218,22 @@ $(document).ready(function () {
         });
     });
 // Owl restimonial end
+// Sliding partner start 
+    $(document).ready(function () {
+        $(".sliding_partner .owl-demo1").owlCarousel({
+            items: 6,
+            itemsDesktop: [1000, 6],
+            itemsDesktopSmall: [979, 4],
+            itemsTablet: [768, 4],
+            itemsMobile: [640, 2],
+            itemsMobileSmall: [320, 1],
+            pagination: false,
+            navigation: true,
+            navigationText: ["", ""],
+            autoPlay: true
+        });
+    });
+// Sliding partner end
 // Animate site start
     $(document).ready(function () {
         new WOW().init();
