@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TechBrainz | Course</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="images/logo.png" type="image/x-icon" />
+        <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="assets/owl-carousel/owl.carousel.css">
+        <link rel="stylesheet" href="assets/owl-carousel/owl.theme.css">
+    </head>
+    <body>
+        <div class="main_container">
+            <div class="pre_header_container">
+                <div class="row">
+                    <div class="col-sm-offset-7">
+                        <div class="quick_contact">
+                            <a href="mailto:mail@domain.com"> <i class="fas fa-envelope">&nbsp;</i> info@techbrainz.in</a>
+                            <a href="callto:+91-9999999999"> <i class="fas fa-phone-square">&nbsp;</i> +91-9606567567</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_container header_container_scroll">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-sm-3">
+                            <div class="logo_container" id="i_frame">
+                                <a href="/"><img src="images/logo.png" class="img-responsive" alt="Tech Brainz"/></a>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="menu_container">
+                                <div class='navbar navbar-inverse navbar-static-top ' role="navigation">
+                                    <div class='navbar-header'>
+                                        <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+                                            <span class='sr-only'>Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button> 
+                                        <a class='navbar-brand' href='/'><img src='images/logo.png' alt='Tech Brainz'/></a>
+                                    </div><div class='navbar-collapse collapse'>
+                                        <ul class='nav navbar-nav'>
+                                            <li class=''><a  class='' href='http://techbrainz.in/Home'>Home</a></li>
+                                            <li class=''><a  class='' href='http://techbrainz.in/Aboutus'>About us</a></li>
+                                            <li class='dropdown'><a data-toggle="dropdown" class='men_vis dropdown-toggle' href='#'>Services <b class="caret"></b></a>
+                                                <ul class='dropdown-menu'>
+                                                    <li class=''><a class='' href='http://techbrainz.in/Trainings'>Trainings</a></li>
+                                                    <li class=''><a class='' href='http://techbrainz.in/Staffing'>Staffing & Recruitment</a></li>
+                                                    <li class=''><a class='' href='http://techbrainz.in/Consulting'>Consulting</a></li>
+                                                    <li class=''><a class='' href='http://techbrainz.in/Interview'>Interview process outsourcing (IPO)</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class='dropdown'><a data-toggle="dropdown" class='men_vis dropdown-toggle' href='#'>Trainings <b class="caret"></b></a>
+                                                <ul class='dropdown-menu'>
+                                                    <li class=''><a class='' href='http://techbrainz.in/Course'>Course</a></li>
+                                                    <li class=''><a class='' href='http://techbrainz.in/Corporate'>Corporate Training</a></li>
+                                                    <li class=''><a class='' href='http://techbrainz.in/Belight'>Belight</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=''><a  class='' href='http://techbrainz.in/Event'>Events</a></li>
+                                            <li class=''><a  class='' href='http://techbrainz.in/Blog'>Blog</a></li>
+                                            <li class=''><a  class='' href='http://techbrainz.in/Career'>Careers</a></li>
+                                            <li class=''><a  class='' href='http://techbrainz.in/ContactUs'>Contact us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-1">
+                            <div class="search">
+                                <input type="search" id="search" />
+                                <label for="search"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .sugg {
+                    list-style-type: none;
+                    border: .1px solid white;
+                    position: absolute;
+                    margin-top: 10%;
+                    margin-left: 0.3%;
+                    background-color: white;
+                    width: 94.7%;
+                    z-index: 1;
+                }
+            </style>
+            <div class="course_search_banner_container">
+                <img src="images/service_banner.jpg" alt="Tech Brainz" class="img-responsive">
+                <div class="cour_banner_content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="find_cour">
+                                    <b>Find Courses</b>
+                                    <form class="form-horizontal" action="http://techbrainz.in/Web/get_coursed" method="post">
+                                        <div class="input-group">
+                                            <!--<input type="text" class="form-control" placeholder="">-->
+                                            <input type="text" class="form-control find2 typeahead" autocomplete="off" id="skill_input" value="" name="cat" placeholder="Category" onkeyup="ajaxSearch();">
+                                            <span class="input-group-btn">
+                                                <button class="btn" type="submit">Search</button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                                <ul class="sugg" name="suggesat"></ul>
+                                <div class="quick_search">
+                                    <div class='owl-demo1 nav nav-tabs'>
+                                        <div class='item'>
+                                            <div class="qui_img">
+                                                <a href="#cou_1" data-toggle="tab" class="active"><img src="images/ser_icon01.png" alt="Tech Brainz" class="img-responsive"/>
+                                                    Data Science</a>
+                                            </div>
+                                        </div>
+                                        <div class='item'>
+                                            <div class="qui_img">
+                                                <a href="#cou_2" data-toggle="tab"><img src="images/ser_icon02.png" alt="Tech Brainz" class="img-responsive">
+                                                    Cloud & DevOps</a>
+                                            </div>
+                                        </div>
+                                        <div class='item'>
+                                            <div class="qui_img">
+                                                <a href="#cou_3" data-toggle="tab"><img src="images/ser_icon03.png" alt="Tech Brainz" class="img-responsive">
+                                                    Big Data</a>
+                                            </div>
+                                        </div>
+                                        <div class='item'>
+                                            <div class="qui_img">
+                                                <a href="#cou_4" data-toggle="tab"><img src="images/ser_icon04.png" alt="Tech Brainz" class="img-responsive">
+                                                    BlockChain</a>
+                                            </div>
+                                        </div>
+                                        <div class='item'>
+                                            <div class="qui_img">
+                                                <a href="#cou_5" data-toggle="tab"><img src="images/ser_icon05.png" alt="Tech Brainz" class="img-responsive">
+                                                    SAP</a>
+                                            </div>
+                                        </div>
+                                        <div class='item'>
+                                            <div class="qui_img">
+                                                <a href="#cou_6" data-toggle="tab"><img src="images/ser_icon06.png" alt="Tech Brainz" class="img-responsive">
+                                                    BI & Visualization</a>
+                                            </div>
+                                        </div>
+                                        <div class='item'>
+                                            <div class="qui_img">
+                                                <a href="#cou_7" data-toggle="tab"><img src="images/ser_icon06.png" alt="Tech Brainz" class="img-responsive">
+                                                    Programming</a>
+                                            </div>
+                                        </div>
+                                        <div class='item'>
+                                            <div class="qui_img">
+                                                <a href="#cou_8" data-toggle="tab"><img src="images/ser_icon06.png" alt="Tech Brainz" class="img-responsive">
+                                                    Software Testing</a>
+                                            </div>
+                                        </div>
+                                        <div class='item'>
+                                            <div class="qui_img">
+                                                <a href="#cou_9" data-toggle="tab"><img src="images/ser_icon06.png" alt="Tech Brainz" class="img-responsive">
+                                                    Middleware</a>
+                                            </div>
+                                        </div>
+                                        <div class='item'>
+                                            <div class="qui_img">
+                                                <a href="#cou_10" data-toggle="tab"><img src="images/ser_icon06.png" alt="Tech Brainz" class="img-responsive">
+                                                    Others</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popular_container">
+                <div class="container">
+                    <div class="popu_head">
+                        <b>Popular Courses</b>
+                        <img src="images/head_under.png" alt="Tech Brainz" class="img-responsive">
+                    </div>
+                    <div class="banner_popular_linked tab-content">
+                        <div id="cou_1" class="tab-pane fade in active">
+                            <!--                            <ul>
+                                                            <li>Artificial Intelligence</li>
+                                                            <li>IBM Watson</li>
+                                                        </ul>-->
+                            <div class='owl-demo_course_big_scroll'>
+                                <div class='item'>
+                                    <div class="slide_course">
+                                        <img src="images/caro_01.jpg" alt="Tech Brainz" class="img-responsive">
+                                        <div class="slid_cont">
+                                            <b>Artificial Intelligence</b>
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='item'>
+                                    <div class="slide_course">
+                                        <img src="images/caro_02.jpg" alt="Tech Brainz" class="img-responsive">
+                                        <div class="slid_cont">
+                                            <b>IBM Watson</b>
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='item'>
+<!--                                    <div class="slide_course">
+                                        <img src="images/caro_01.jpg" alt="Tech Brainz" class="img-responsive">
+                                        <div class="slid_cont">
+                                            <b>Artificial Intelligence</b>
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>-->
+                                </div>
+                                <div class='item'>
+<!--                                    <div class="slide_course">
+                                        <img src="images/caro_02.jpg" alt="Tech Brainz" class="img-responsive">
+                                        <div class="slid_cont">
+                                            <b>IBM Watson</b>
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>-->
+                                </div>
+                                <div class='item'>
+<!--                                    <div class="slide_course">
+                                        <img src="images/caro_01.jpg" alt="Tech Brainz" class="img-responsive">
+                                        <div class="slid_cont">
+                                            <b>Artificial Intelligence</b>
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>-->
+                                </div>
+                                <div class='item'>
+<!--                                    <div class="slide_course">
+                                        <img src="images/caro_02.jpg" alt="Tech Brainz" class="img-responsive">
+                                        <div class="slid_cont">
+                                            <b>IBM Watson</b>
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="cou_2" class="tab-pane fade">
+                            <!--                        <ul>
+                                                        <li>AWS-Amazon Webservices</li>
+                                                        <li>DevOps</li>
+                                                        <li>Kubernetes</li>
+                                                        <li>Salesforce Commerce Cloud</li>
+                                                        <li>Microsoft Azure</li>
+                                                    </ul>-->
+                            <div class='owl-demo_course_big_scroll'>
+                                <div class='item'>
+                                    <div class="slide_course">
+                                        <img src="images/caro_01.jpg" alt="Tech Brainz" class="img-responsive">
+                                        <div class="slid_cont">
+                                            <b>AWS-Amazon Webservices</b>
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='item'>
+                                    <div class="slide_course">
+                                        <img src="images/caro_02.jpg" alt="Tech Brainz" class="img-responsive">
+                                        <div class="slid_cont">
+                                            <b>DevOps</b>
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='item'>
+                                    <div class="slide_course">
+                                        <img src="images/caro_01.jpg" alt="Tech Brainz" class="img-responsive">
+                                        <div class="slid_cont">
+                                            <b>Kubernetes</b>
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='item'>
+                                    <div class="slide_course">
+                                        <img src="images/caro_02.jpg" alt="Tech Brainz" class="img-responsive">
+                                        <div class="slid_cont">
+                                            <b>Salesforce Commerce Cloud</b>
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='item'>
+                                    <div class="slide_course">
+                                        <img src="images/caro_01.jpg" alt="Tech Brainz" class="img-responsive">
+                                        <div class="slid_cont">
+                                            <b>Microsoft Azure</b>
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='item'>
+                                    <div class="slide_course">
+                                        <img src="images/caro_02.jpg" alt="Tech Brainz" class="img-responsive">
+                                        <div class="slid_cont">
+                                            <b>IBM Watson</b>
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="cou_3" class="tab-pane fade">
+                            <ul>
+                                <li>BigData&Hadoop</li>
+                                <li>Spark & Scala</li>
+                                <li>Hadoop with Spark</li>
+                                <li>PySpark</li>
+                            </ul>
+                        </div>
+                        <div id="cou_4" class="tab-pane fade">
+                            <ul>
+                                <li>Ethereum Certication Training</li>
+                            </ul>
+                        </div>
+                        <div id="cou_5" class="tab-pane fade">
+                            <ul>
+                                <li>SAP ABAP on HANA</li>
+                                <li>SAP FIORI/UI5</li>
+                                <li>SAP EWM</li>
+                                <li>SAP S4 HANA Logistics</li>
+                                <li>SAP S4 HANA Finance</li>
+                                <li>SAP IBP</li>
+                                <li>SAP MDG</li>
+                                <li>SAP ARIBA</li>
+                                <li>SAP SuccessFactors</li>
+                                <li>SAP Hybris Commerce</li>
+                                <li>SAP Hybris Billing</li>
+                                <li>SAP GRC Access Control</li>
+                                <li>SAP GRC Process Control</li>
+                                <li>SAP HANA Administration</li>
+                                <li>SAP C/4 HANA</li>
+                                <li>HANA Cloud Integration - HCI</li>
+                                <li>SAP PPDS</li>
+                            </ul>
+                        </div>
+                        <div id="cou_6" class="tab-pane fade">
+                            <ul>
+                                <li>Tableau</li>
+                                <li>Microsoft Power BI</li>
+                                <li>Microsoft BI</li>
+                                <li>QlikView</li> 
+                                <li>Adobe Analytics</li>
+                            </ul>
+                        </div>
+                        <div id="cou_7" class="tab-pane fade">
+                            <ul>
+                                <li>Python</li>
+                                <li>Fullstack Training</li>
+                                <li>Adobe Magento</li>
+                                <li>JAVA</li>
+                                <li>Microsoft .Net</li>
+                                <li>Python Django</li>
+                                <li>React JS</li>
+                                <li>Node JS</li>
+                                <li>Angular JS</li>
+                            </ul>
+                        </div>
+                        <div id="cou_8" class="tab-pane fade">
+                            <ul>
+                                <li>Selenium</li>
+                                <li>Load Runner</li>
+                                <li>ETL Testing</li>
+                            </ul>
+                        </div>
+                        <div id="cou_9" class="tab-pane fade">
+                            <ul>
+                                <li>Mule ESB</li>
+                                <li>IBM API Connect</li>
+                            </ul>
+                        </div>
+                        <div id="cou_9" class="tab-pane fade">
+                            <ul>
+                                <li>IoT</li>
+                                <li>VLSI</li>
+                                <li>Embedded Systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reques_contianer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-5 col-sm-offset-1 nopad">
+                            <div class="req_div_left">
+                                <b>Request for Live Demo <img src="images/req_icon_lft.png" alt="Tech Brainz" class="img-responsive"></b>
+                                <p>
+                                    We have world classes professional trainers
+                                    to make experts in all the corners of the certification.
+                                    <br>
+                                    We have world classes professional trainers
+                                    to make experts in all the corners of the certification.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 col-sm-offset-right-1 nopad">
+                            <div class="req_div_right">
+                                <b><img src="images/req_icon_rit.png" alt="Tech Brainz" class="img-responsive"> Get Our Expert Support</b>
+                                <p>
+                                    We have world classes professional trainers
+                                    to make experts in all the corners of the certification.
+                                    <br>
+                                    We have world classes professional trainers
+                                    to make experts in all the corners of the certification.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div class="backgroundimg">
+                <p>&nbsp;</p>
+            </div>
+
+            <div class="train_metho_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="train_metholady">
+                                <img src="images/servi_lady_onsearch.png" alt="Tech Brainz" class="img-responsive">
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="taining_meth">
+                                <b> Training Methodology </b>
+                                <div class="train_tre_sec">
+                                    <img src="images/train_meth_01.png" alt="Tech Brainz" class="img-responsive">
+                                    <span>Classroom Training</span>
+                                    <p>TechBrainz Provides face to face classroom training to students from all over the world
+                                        Our solution includes all training related services.
+                                    </p>
+                                </div>
+                                <div class="train_tre_sec">
+                                    <img src="images/train_meth_02.png" alt="Tech Brainz" class="img-responsive">
+                                    <span>Corporate Training</span>
+                                    <p>TechBrainz Provides face to face classroom training to students from all over the world
+                                        Our solution includes all training related services.
+                                    </p>
+                                </div>
+                                <div class="train_tre_sec">
+                                    <img src="images/train_meth_03.png" alt="Tech Brainz" class="img-responsive">
+                                    <span>Virtual Training</span>
+                                    <p>TechBrainz Provides face to face classroom training to students from all over the world
+                                        Our solution includes all training related services.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="new_lett_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="news_left_se">
+                                <p><img src="images/news_lett.png" alt="Tech Brainz" class="img-responsive">
+                                    <span>Our</span> NewsLetter</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="newa_riht_se">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Enter your email address">
+                                    <span class="input-group-btn">
+                                        <button class="btn" type="submit"><i class="fas fa-paper-plane"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial_review_container">
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <div class="revie_head">
+                                <p>Reviews & Testimonials</p>
+                            </div>
+
+                            <div id="testimonial-slider" class="owl-carousel">
+
+                                <div class="testimonial">
+
+                                    <div class="pic">
+                                        <img src="images/review_men.png" alt="Tech Brainz" class="img-responsive">
+
+                                    </div>
+
+                                    <div class="testimonial-profile">
+
+                                        <h3 class="title">williamson</h3>
+                                        <span class="post">Web Developer</span>
+
+                                    </div>
+
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros consequat auctor gravida. Fusce tristique lacus at urna sollicitudin pulvinar. Suspendisse hendrerit ultrices mauris.
+
+                                    </p>
+
+                                </div>
+
+                                <div class="testimonial">
+
+                                    <div class="pic">
+                                        <img src="images/review_women.png" alt="Tech Brainz" class="img-responsive">
+
+                                    </div>
+
+                                    <div class="testimonial-profile">
+
+                                        <h3 class="title">Kristina</h3>
+                                        <span class="post">Web Designer</span>
+
+                                    </div>
+
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros consequat auctor gravida. Fusce tristique lacus at urna sollicitudin pulvinar. Suspendisse hendrerit ultrices mauris.
+
+                                    </p>
+
+                                </div>
+
+                                <div class="testimonial">
+
+                                    <div class="pic">
+                                        <img src="images/review_men.png" alt="Tech Brainz" class="img-responsive">
+
+                                    </div>
+
+                                    <div class="testimonial-profile">
+
+                                        <h3 class="title">Steve Thomas</h3>
+                                        <span class="post">Web Developer</span>
+
+                                    </div>
+
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros consequat auctor gravida. Fusce tristique lacus at urna sollicitudin pulvinar. Suspendisse hendrerit ultrices mauris.
+
+                                    </p>
+
+                                </div>
+                                <div class="testimonial">
+
+                                    <div class="pic">
+                                        <img src="images/review_women.png" alt="Tech Brainz" class="img-responsive">
+
+                                    </div>
+
+                                    <div class="testimonial-profile">
+
+                                        <h3 class="title">Steve Thomas</h3>
+                                        <span class="post">Web Developer</span>
+
+                                    </div>
+
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros consequat auctor gravida. Fusce tristique lacus at urna sollicitudin pulvinar. Suspendisse hendrerit ultrices mauris.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="foot_container">
+                <div class="foot_head">
+                    <p>Get In Touch</p>
+                    <img src="images/head_under_w.png" alt="Tech Brainz" class="img-responsive">
+                </div>
+                <div class="col-sm-6 nopad">
+                    <div class="goo_map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.2523497668344!2d77.69380071482179!3d12.955697690866273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13ccc08aeb93%3A0x6d0641126b5c25a7!2sData+Science%2FAnalytics+BigData%2FHadoop+AI+AWS%26Devops+SAP+Hybris+Python+RPA+Institute+in+Marathahalli.!5e0!3m2!1sen!2sin!4v1547989153489" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-4 left_padding">
+                    <div class="addre_detai">
+                        <span>Tech Brainz Consulting</span>
+                        <p>#202-A, 2nd Floor, Sigma Arcade, Old Airport Road,<br>
+                            Marathahalli, Bangalore, Karnataka - 560037</p>
+                        <a href="callto:+91-9148 567 567"><i class="fas fa-phone-square"></i> +91-9148 567 567, +91-9606 567 567</a>
+                        <a href="mailto:info@techbrainz.in"><i class="fas fa-envelope"></i> info@techbrainz.in</a>
+                    </div>
+                    <div class="soci_media">
+                        <span>Follow us</span>
+                        <a href="#"><img src="images/yt.jpg" alt="Tech Brainz" class="img-responsive"></a>
+                        <a href="#"><img src="images/fb.jpg" alt="Tech Brainz" class="img-responsive"></a>
+                        <a href="#"><img src="images/tw.jpg" alt="Tech Brainz" class="img-responsive"></a>
+                        <a href="#"><img src="images/gp.jpg" alt="Tech Brainz" class="img-responsive"></a>
+                        <a href="#"><img src="images/in.jpg" alt="Tech Brainz" class="img-responsive"></a>
+                    </div>
+                    <div class="broucher">
+                        <p>Download</p>
+                        <a href="#">Corporate Brochure &nbsp; <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="quick_lks">
+                        <b>Quick Links</b>
+                        <ul>
+                            <li><a href="index.html"><i class="fas fa-caret-right"></i> Home</a></li>
+                            <li><a href="about.html"><i class="fas fa-caret-right"></i> About us</a></li>
+                            <li><a href="course.html"><i class="fas fa-caret-right"></i> Services</a></li>
+                            <li><a href="course.html"><i class="fas fa-caret-right"></i> Training</a></li>
+                            <li><a href="events.html"><i class="fas fa-caret-right"></i> Events</a></li>
+                            <li><a href="blog.html"><i class="fas fa-caret-right"></i> Blog</a></li>
+                            <li><a href="career.html"><i class="fas fa-caret-right"></i> Careers</a></li>
+                            <li><a href="contact.html"><i class="fas fa-caret-right"></i> Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copy_cont">
+                <p>© 2019 Tech Brainz - Your Career Gateway | Privacy | Terms | Cookie | Policy</p>
+            </div>
+            <div class="back-to-top">
+                <a id="back-to-top" href="#" class="hvr-bounce-to-bottom"><i class="fa fa-arrow-up"></i></a>
+            </div>
+        </div>
+
+        <script src="assets/bootstrap/jquery.min.js"></script>
+        <script src="assets/bootstrap/bootstrap.min.js"></script>
+        <script src="assets/owl-carousel/owl.carousel.js"></script>
+        <script src="js/script.js"></script>
+        <script type="text/javascript">
+
+                                                function ajaxSearch()
+                                                {
+                                                    var input_data = $('#skill_input').val();
+                                                    //alert(input_data.length);
+                                                    if (input_data.length === 0)
+                                                    {
+                                                        $('#suggestions').hide();
+                                                    } else
+                                                    {
+
+                                                        var post_data = {
+                                                            'search_data': input_data,
+                                                            'ci_csrf_token': ''
+                                                        };
+
+                                                        $.ajax({
+                                                            type: "POST",
+                                                            url: "http://techbrainz.in/Web/ajaxpro",
+                                                            data: post_data,
+                                                            dataType: "json",
+                                                            success: function (data) {
+
+                                                                $('ul[name="suggesat"]').empty();
+                                                                $.each(data, function (key, value) {
+                                                                    $('ul[name="suggesat"]').append('<li class="ss"  value="' + value.ctitle + '"><a id="dam_return" href="#" value="' + value.ctitle + '" class="test">' + value.ctitle + '</a></li>');
+                                                                });
+
+                                                            }
+                                                        });
+
+                                                    }
+                                                }
+
+                                                $(document).on('click', '#dam_return', function (e) {
+                                                    e.preventDefault();//e = $(this).attr('href');
+                                                    //this gets the href
+                                                    e = $(this).text();//This gets the textalert(e);
+                                                    var a = $("#skill_input").val(e);
+                                                });
+
+
+
+
+        </script>
+        <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+        <style>
+            .cour_banner_content {
+                top: calc(100% - 80%);
+            }
+            .find_cour b {
+                font-size: 35px;
+                line-height: 35px;
+            }
+            .find_cour input {
+                height: 55px;
+            }
+            .find_cour .btn {
+                padding: 17px 30px;
+            }
+            .qui_img img {
+                width: 50%;
+            }
+            .quick_search .nav-tabs {
+                border-bottom: 0px solid #ddd;
+            }
+            .banner_popular_linked {
+                float: left;
+                width: 100%;
+                background-color: #ddd;
+                padding: 2%;
+                font-size: 20px;
+                line-height: 35px;
+                border-radius: 10px;
+            }
+            .owl-demo_course_big_scroll {
+                float: left;
+                width: 100%;
+            }
+            .slid_cont b {
+                font-size: 15px;
+            }
+            .banner_popular_linked .item {
+                margin: 0 5px;
+            }
+        </style>
+        <script>
+                                                // Sliding partner start
+                                                $(document).ready(function () {
+                                                    $(".owl-demo1").owlCarousel({
+                                                        items: 6,
+                                                        itemsDesktop: [1000, 6],
+                                                        itemsDesktopSmall: [979, 4],
+                                                        itemsTablet: [768, 4],
+                                                        itemsMobile: [640, 2],
+                                                        itemsMobileSmall: [320, 1],
+                                                        pagination: false,
+                                                        navigation: true,
+                                                        navigationText: ["", ""],
+                                                        autoPlay: true
+                                                    });
+                                                    $(".owl-demo_course_big_scroll").owlCarousel({
+                                                        items: 5,
+                                                        itemsDesktop: [1000, 5],
+                                                        itemsDesktopSmall: [979, 4],
+                                                        itemsTablet: [768, 4],
+                                                        itemsMobile: [640, 2],
+                                                        itemsMobileSmall: [320, 1],
+                                                        pagination: false,
+                                                        navigation: true,
+                                                        navigationText: ["", ""],
+                                                        autoPlay: true
+                                                    });
+
+                                                });
+                                                // Sliding partner end
+                                                $(document).ready(function () {
+                                                    // handle links with @href started with '#' only
+                                                    $(document).on('click', 'a[href^="#"]', function (e) {
+                                                        // target element id
+                                                        var id = $(this).attr('href');
+
+                                                        // target element
+                                                        var $id = $(id);
+                                                        if ($id.length === 0) {
+                                                            return;
+                                                        }
+
+                                                        // prevent standard hash navigation (avoid blinking in IE)
+                                                        e.preventDefault();
+
+                                                        // top position relative to the document
+                                                        var pos = $id.offset().top;
+
+                                                        // animated top scrolling
+                                                        $('body, html').animate({scrollTop: pos});
+                                                    });
+                                                });
+        </script>
+    </body>
+</html>
